@@ -1,0 +1,27 @@
+"lastCity":"101200100",
+" __zp_stoken__":"e6612GML%2FHg8ACnV2lh1BpocR9nXXfFPwpFXJoqp9TiqHgpVEE4z1EKylc1W3sNZI4xnAQbZAJ4J6Xgoe3Hnxv4hJg%3D%3D", "__c":"1574573982",
+"__g":"-",
+" __l":"l=%2Fwww.zhipin.com%2F&r=https%3A%2F%2Fwww.baidu.com%2Fs%3Ftn%3D50000023_hao_pg%26ie%3Dutf-8%26sc%3DUWd1pgw-pA7EnHc1FMfqnHRLPjRvPWRkn1f4rauW5y99U1Dznzu9m1Y1PWn1PHcvrHf%26ssl_sample%3Dnormal%26srcqid%3D3685566491577030511%26f%3D3%26rsp%3D0%26H123Tmp%3Dnunew7%26word%3Dboss%25E7%259B%25B4%25E8%2581%2598%25E5%25AE%2598%25E7%25BD%2591&friend_source=0&friend_source=0",
+"__a"="30408278.1563331770.1574504775.1574573982.129.7.6.128",
+"Hm_lvt_194df3105ad7148dcf2b98a91b5e727a":"1574574317,1574574503,1574574616,1574575044", "Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a":"1574575044"
+
+__
+        "_uab_collina":"156594127160811552815566",
+        "sid":"sem_pz_bdpc_dasou_title",
+
+soup=BeautifulSoup(r.text,"html.parser")
+hname=soup.find_all(class_='job-primary')
+for Names in hname:
+    names=Names.find_all(class_='job-title')
+    singname=[]
+    for name in names:
+        singname.append(name.string)
+    allname.append(singname)
+for Coms in hname:
+    coms=Coms.find_all(class_='name')
+    singcom=[]
+    for com in coms:
+        singcom.append(com.string)
+    allcom.append(singcom)
+    for u in allcom:
+        print(u[0])
